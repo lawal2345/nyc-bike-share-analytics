@@ -19,17 +19,12 @@ This project implements an end-to-end data pipeline that:
 
 ## Architecture
 
-GBFS JSON
-    ↓ (every 15 min)
-Cloud Function
-    ↓
-Cloud Storage (Data Lake)
-    ↓ (hourly via Prefect)
-BigQuery (Raw Tables)
-    ↓
-dbt Transformations (Staging → Marts)
-    ↓
-Looker Studio Dashboard
+1. GBFS JSON (every 15 min)
+2. Cloud Function
+3. Cloud Storage (Data Lake) - hourly via Prefect
+4. BigQuery (Raw Tables)
+5. dbt Transformations (Staging → Marts)
+6. Looker Studio Dashboard
 
 **Technologies Used:**
 - **Cloud:** Google Cloud Platform (Cloud Functions, Cloud Storage, BigQuery)
@@ -137,21 +132,9 @@ LIMIT 10
 
 ---
 
-## 🔮 Future Enhancements
-
-- [ ] Add weather data (correlate bike usage with weather)
-- [ ] Predictive modeling (forecast demand)
-- [ ] Anomaly detection (identify unusual patterns)
-- [ ] Real-time alerting (Slack notifications for system issues)
-- [ ] Cost optimization (query optimization, partitioning strategies)
-
----
-
 Data source: [Citi Bike GBFS API](https://gbfs.lyft.com/gbfs/2.3/bkn/en/station_status.json)
 
 ---
-
-## Author
 
 **Jesutofunmi Lawal**
 - [LinkedIn](https://www.linkedin.com/in/jesutofunmi-lawal-51683218b/)
