@@ -1,0 +1,31 @@
+# Terraform (IMPORTANT - excludes large files)
+terraform/
+.terraform/
+*.tfstate
+*.tfstate.backup
+
+# Python
+__pycache__/
+*.py[cod]
+venv/
+env/
+
+# dbt
+bike_sharing_analytics/target/
+bike_sharing_analytics/dbt_packages/
+bike_sharing_analytics/logs/
+
+# OS
+.DS_Store
+
+# Credentials
+*.json
+!dbt_project.json
+credentials/
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log

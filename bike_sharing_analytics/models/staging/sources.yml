@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: bike_sharing_data
+    database: urban-mobility-analytics  # Your GCP project ID
+    schema: bike_sharing_data           # Your dataset name
+    tables:
+      - name: raw_station_status
+        description: "Raw bike station status data collected every 15 minutes"
+      - name: raw_station_info
+        description: "Static station information (names, locations)"
