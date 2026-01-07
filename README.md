@@ -19,6 +19,9 @@ This project implements an end-to-end data pipeline that:
 
 ## Architecture
 
+![Architecture Diagram](screenshots/architecture.png)
+*Data pipeline from collection to visualization*
+
 1. GBFS JSON (every 15 min)
 2. Cloud Function
 3. Cloud Storage (Data Lake) - hourly via Prefect
@@ -38,23 +41,23 @@ This project implements an end-to-end data pipeline that:
 ## Project Structure
 
 urban-mobility-project/
-├── bigquery/                    # BigQuery table schemas
-│   ├── create_raw_station_status.sql
-│   └── create_raw_station_info.sql
-├── data_loading/                # ETL scripts
-│   ├── load_station_status.py
-│   ├── load_station_info.py
-│   └── prefect_load_station_status.py
-├── bike_sharing_analytics/      # dbt project
-│   ├── models/
-│   │   ├── staging/            # Raw → Clean
-│   │   │   ├── stg_station_status.sql
-│   │   │   └── stg_station_info.sql
-│   │   └── marts/              # Analytics tables
-│   │       ├── fact_station_activity.sql
-│   │       └── dim_stations.sql
-│   └── dbt_project.yml
-└── README.md
+    bigquery/                    # BigQuery table schemas
+        create_raw_station_status.sql
+        create_raw_station_info.sql
+    data_loading/                # ETL scripts
+        load_station_status.py
+        load_station_info.py
+        prefect_load_station_status.py
+    bike_sharing_analytics/      # dbt project
+        models/
+            staging/            # Raw → Clean
+                stg_station_status.sql
+                stg_station_info.sql
+            marts/              # Analytics tables
+                fact_station_activity.sql
+                dim_stations.sql
+        dbt_project.yml
+    README.md
 
 
 ---
